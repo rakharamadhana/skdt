@@ -53,32 +53,32 @@
     @if(strpos(Request::url(), 'siap') !== false)
     <style>
         .bg-sign-in{
-            background-color: #747474; 
+            background-color: #747474;
         }
     </style>
     @elseif(strpos(Request::url(), 'kpit') !== false)
     <style>
         .bg-sign-in{
-            background-color: #5172ff; 
+            background-color: #5172ff;
         }
     </style>
     @elseif(strpos(Request::url(), 'i3s-submission') !== false)
     <style>
         .bg-sign-in{
-            background-color: #54457F; 
+            background-color: #54457F;
         }
     </style>
     @else
     <style>
         .bg-sign-in{
-            background-color: #747474; 
+            background-color: #747474;
         }
     </style>
     @endif
 
 <div class="columns is-vcentered bg-sign-in" style="min-height: 110vh;">
     <div class="column is-8-desktop">
-        <figure class="image"> 
+        <figure class="image">
             @if(strpos(Request::url(), 'siap') !== false)
             <img src="{{asset('img/bg-login-siap.png?v=1')}}">
             @elseif(strpos(Request::url(), 'kpit') !== false)
@@ -122,6 +122,7 @@
             </div>
             @else
             <form id="form-signin" class="is-bottom-gap" action="{{route('user.signin')}}" method="POST">
+                @csrf
                 <div class="field">
                     <label class="label has-text-white">Username</label>
                     <div class="control has-icons-left">
@@ -176,7 +177,7 @@
             $('button').addClass('is-loading');
             $('control').addClass('is-loading');
             $('input').attr('readonly', 'readonly');
-            
+
             var formData = new FormData(form);
 
             $.ajax({
