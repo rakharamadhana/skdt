@@ -1,8 +1,8 @@
 
-<nav class="navbar is-info is-fixed-top">
+<nav class="navbar is-info is-fixed-top" style="border-radius: 0;">
     <div class="navbar-brand">
         <a class="navbar-item target-link" href="dashboard#welcome">
-            <img src="{{asset('img/logo-dsm-white.png')}}" alt="Digital Solusi Master">
+            <img src="{{asset('img/logo-org.png')}}" alt="PPI Taiwan">
             &nbsp; PPI TAIWAN
         </a>
         <a class="navbar-item is-hidden-desktop" href="{{url('/')}}" target="_blank">

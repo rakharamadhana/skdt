@@ -206,7 +206,7 @@
                             `    Download Attachment` +
                             `</a>`;
                     }
-                    
+
                     return html;
                 }
             },
@@ -224,11 +224,13 @@
 
                     if(data.status == 0 || data.status == 10){
                         html += `<button class="button is-small is-table is-info button-modal modal-button" data-target="#modal-manage-item" type="button" onclick="loadContent('letter-approval/` + data.id + `/edit', 'modal-manage-item-content')">` +
-                            `    <span>Tindakan</span>` +
+                            `    <span><i class="fa fa-pencil-square-o"></span>` +
                             `</button>`;
                     }
                     if(data.status == 1){
-                        html += `Perlu Revisi: <br>`
+                        html += `<button class="button is-small is-table is-info button-modal modal-button" data-target="#modal-manage-item" type="button" onclick="loadContent('letter-approval/` + data.id + `/edit', 'modal-manage-item-content')">` +
+                            `<span><i class="fa fa-pencil-square-o"></i></span>` +
+                            `</button>` + `<br> Perlu Revisi: <br>`
                             + data.notes;
                     }
                     if(data.status == 2){
@@ -331,7 +333,7 @@
                             `    Download Attachment` +
                             `</a>`;
                     }
-                    
+
                     return html;
                 }
             },
@@ -349,11 +351,13 @@
 
                     if(data.status == 0 || data.status == 10){
                         html += `<button class="button is-small is-table is-info button-modal modal-button" data-target="#modal-manage-item" type="button" onclick="loadContent('letter-approval/` + data.id + `/edit', 'modal-manage-item-content')">` +
-                            `    <span>Tindakan</span>` +
+                            `    <span><i class="fa fa-pencil-square-o"></span>` +
                             `</button>`;
                     }
                     if(data.status == 1){
-                        html += `Perlu Revisi: <br>`
+                        html += `<button class="button is-small is-table is-info button-modal modal-button" data-target="#modal-manage-item" type="button" onclick="loadContent('letter-approval/` + data.id + `/edit', 'modal-manage-item-content')">` +
+                            `<span><i class="fa fa-pencil-square-o"></i></span>` +
+                            `</button>` + `<br> Perlu Revisi: <br>`
                             + data.notes;
                     }
                     if(data.status == 2){
@@ -456,7 +460,7 @@
                             `    Download Attachment` +
                             `</a>`;
                     }
-                    
+
                     return html;
                 }
             },
@@ -474,11 +478,13 @@
 
                     if(data.status == 0 || data.status == 10){
                         html += `<button class="button is-small is-table is-info button-modal modal-button" data-target="#modal-manage-item" type="button" onclick="loadContent('letter-approval/` + data.id + `/edit', 'modal-manage-item-content')">` +
-                            `    <span>Tindakan</span>` +
+                            `    <span><i class="fa fa-pencil-square-o"></span>` +
                             `</button>`;
                     }
                     if(data.status == 1){
-                        html += `Perlu Revisi: <br>`
+                        html += `<button class="button is-small is-table is-info button-modal modal-button" data-target="#modal-manage-item" type="button" onclick="loadContent('letter-approval/` + data.id + `/edit', 'modal-manage-item-content')">` +
+                            `<span><i class="fa fa-pencil-square-o"></i></span>` +
+                            `</button>` + `<br> Perlu Revisi: <br>`
                             + data.notes;
                     }
                     if(data.status == 2){

@@ -131,6 +131,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-factory" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/aws/aws-crt-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/public/uploads" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/public/vendor/sweetalert2-7.18.0/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

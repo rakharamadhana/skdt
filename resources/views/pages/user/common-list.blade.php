@@ -80,13 +80,13 @@
                     let html = ``;
 
                     html += `<button class="button is-small is-table is-info button-modal modal-button" data-target="#modal-manage-item" type="button" onclick="loadContent('user/` + data.id + `/edit', 'modal-manage-item-content')">` +
-                        `    <span>Edit</span>` +
+                        `    <span><i class="fa fa-pencil-square-o"></i></span>` +
                         `</button>`;
                     html += `<button class="button is-small is-table is-primary button-modal modal-button" data-target="#modal-manage-item" type="button" onclick="loadContent('user/password/` + data.id + `', 'modal-manage-item-content')">` +
-                        `    <span>Set Password</span>` +
+                        `    <span><i class="fa fa-pencil"></i> Password</span>` +
                         `</button>`;
                     html += `<a class="button is-table is-outlined is-small is-danger" onclick="deleteAction(this)" data-id="` + data.id + `">` +
-                        `    <span>Delete</span>` +
+                        `    <span><i class="fa fa-trash"></i></span>` +
                         `</a>`;
 
                     return html;

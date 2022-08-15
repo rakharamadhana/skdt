@@ -16,31 +16,31 @@
             <div class="column">
                 <div class="has-text-centered">
                     <figure class="image is-128x128">
-                        <img src="{{asset('img/logo-org.jpeg')}}">
+                        <img src="{{asset('img/logo-org.png')}}">
                     </figure>
                 </div>
             </div>
             <div class="column is-10">
                 @if(strpos(Request::url(), 'siap') !== false)
-                    @php 
-                    $submodul = 'SIAP'; 
+                    @php
+                    $submodul = 'SIAP';
                     @endphp
                 @elseif(strpos(Request::url(), 'kpit') !== false)
-                    @php 
+                    @php
                         $submodul = 'KPIT';
                     @endphp
                 @elseif(strpos(Request::url(), 'i3s-submission') !== false)
-                    @php 
-                        $submodul = 'I3S'; 
+                    @php
+                        $submodul = 'I3S';
                     @endphp
                 @else
-                    @php 
-                        $submodul = 'SKDT'; 
+                    @php
+                        $submodul = 'SKDT';
                     @endphp
                 @endif
-                <p class="title is-4">Welcome {{auth_data()->fullname}} 
+                <p class="title is-4">Welcome {{auth_data()->fullname}}
                     @if($submodul == 'KPIT' || $submodul == 'SKDT')
-                    <b style="text-decoration-line: underline;">({{auth_data()->statusToText()}})</b> 
+                    <b style="text-decoration-line: underline;">({{auth_data()->statusToText()}})</b>
                     @endif
                     on {{$submodul}} PPI Taiwan</p>
                 @if($submodul == 'KPIT')

@@ -23,24 +23,24 @@
                     <div class="level-item">
                         <button class="button is-small is-success" onclick="downloadFile('xls')">
                             <span class="icon">
-                                <i class="fa fa-file"></i>
-                            </span>    
+                                <i class="fa fa-download"></i>
+                            </span>
                             <span>Excel</span>
                         </button>
                     </div>
                     <div class="level-item">
                         <button class="button is-small is-primary" onclick="downloadFile('ktp')">
                             <span class="icon">
-                                <i class="fa fa-file"></i>
-                            </span>    
+                                <i class="fa fa-download"></i>
+                            </span>
                             <span>KTP File (Zip)</span>
                         </button>
                     </div>
                     <div class="level-item">
                         <button class="button is-small is-black" onclick="downloadFile('passport')">
                             <span class="icon">
-                                <i class="fa fa-file"></i>
-                            </span>    
+                                <i class="fa fa-download"></i>
+                            </span>
                             <span>Passport File (Zip)</span>
                         </button>
                     </div>
@@ -161,20 +161,22 @@
 
                     if(data.status == 0 || data.status == 10){
                         html += `<button class="button is-small is-table is-info button-modal modal-button" data-target="#modal-manage-item" type="button" onclick="loadContent('card-approval/` + data.id + `/edit', 'modal-manage-item-content')">` +
-                            `    <span>Tindakan</span>` +
+                            `    <span><i class="fa fa-pencil-square-o"></i></span>` +
                             `</button>`;
                     }
                     if(data.status == 1){
-                        html += `Perlu Revisi: <br>`
-                            + data.notes;
+                        html += `<button class="button is-small is-table is-info button-modal modal-button" data-target="#modal-manage-item" type="button" onclick="loadContent('card-approval/` + data.id + `/edit', 'modal-manage-item-content')">` +
+                            `<span><i class="fa fa-pencil-square-o"></i></span>` +
+                            `</button>` + `<br><small>Perlu Revisi: <br>`
+                            + data.notes + `</small>`;
                     }
                     if(data.status == 2){
                         html += `<a class="tag is-medium is-success" href="` + data.card_url +`" target="_blank">` +
-                        `    Download KPIT` +
+                        `KPIT <i class="fa fa-download"></i>` +
                         `</a>`;
                     }
-                    // html += `<a class="button is-table is-outlined is-small is-danger" onclick="deleteAction(this)" data-id="` + data.id + `">` +
-                    //     `    <span>Delete</span>` +
+                    // html += `<br><a class="button is-table is-outlined is-small is-danger" onclick="deleteAction(this)" data-id="` + data.id + `">` +
+                    //     `<span><i class="fa fa-trash"></i></span>` +
                     //     `</a>`;
 
                     return html;
